@@ -3,11 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <data>
-        <variable
-            name="data"
-            type="com.example.domain.model.DomainScore" />
-    </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -40,7 +35,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="man"
-                set_man="@{data.man}"
                 android:textColor="@color/black"
                 android:textSize="15sp" />
         </LinearLayout>
@@ -68,7 +62,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="0"
-                set_percentage="@{data.percentage}"
                 android:textColor="@color/black"
                 android:textSize="15sp" />
         </LinearLayout>
@@ -96,7 +89,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="woman"
-                set_woman="@{data.woman}"
                 android:textColor="@color/black"
                 android:textSize="15sp" />
         </LinearLayout>

@@ -9,24 +9,41 @@
         android:id="@+id/mainFragment"
         android:name="com.example.presentation.view.MainFragment"
         tool:layout="@layout/fragment_main"
-        android:label="MainFragment" />
-
-    <fragment
-        android:id="@+id/manNameFragment"
-        android:name="com.example.presentation.view.ManNameFragment"
-        tool:layout="@layout/fragment_man_name"
-        android:label="ManNameFragment" />
+        android:label="MainFragment" >
+        <action
+            android:id="@+id/action_mainFragment_to_womanNameFragment"
+            app:destination="@id/womanNameFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/womanNameFragment"
         android:name="com.example.presentation.view.WomanNameFragment"
         tool:layout="@layout/fragment_woman_name"
-        android:label="WomanNameFragment" />
+        android:label="WomanNameFragment" >
+        <action
+            android:id="@+id/action_womanNameFragment_to_manNameFragment"
+            app:destination="@id/manNameFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/manNameFragment"
+        android:name="com.example.presentation.view.ManNameFragment"
+        tool:layout="@layout/fragment_man_name"
+        android:label="ManNameFragment" >
+        <action
+            android:id="@+id/action_manNameFragment_to_resultFragment"
+            app:destination="@id/resultFragment" />
+    </fragment>
+
 
     <fragment
         android:id="@+id/resultFragment"
         android:name="com.example.presentation.view.ResultFragment"
         tool:layout="@layout/fragment_result"
-        android:label="ResultFragment" />
+        android:label="ResultFragment" >
+        <action
+            android:id="@+id/action_resultFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
 
 </navigation>
